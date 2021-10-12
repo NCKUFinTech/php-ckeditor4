@@ -10,8 +10,8 @@
             ':textarea' => $textarea,
             ':title'=> $title
          ));
-
-         header('Location: editor');
+         $id=$db->lastInsertId('id');
+         header("Location:editorinfo?id=".$id);
       }else{
          echo "error !";
       }

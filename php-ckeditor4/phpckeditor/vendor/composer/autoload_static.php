@@ -26,12 +26,9 @@ class ComposerStaticInit9ae07914eb8d8193fb6832d6527e0a5e
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'ECPay' => __DIR__ . '/../..' . '/classes/config.php',
-        'FBlogin' => __DIR__ . '/../..' . '/classes/config.php',
         'MySQL' => __DIR__ . '/../..' . '/classes/config.php',
         'Request' => __DIR__ . '/../..' . '/classes/request.php',
         'Router' => __DIR__ . '/../..' . '/classes/router.php',
-        'address' => __DIR__ . '/../..' . '/classes/config.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

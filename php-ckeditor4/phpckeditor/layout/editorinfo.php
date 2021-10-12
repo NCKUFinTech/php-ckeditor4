@@ -2,23 +2,23 @@
 <?php 
   //read
   if(isset($_GET['id'])){
-    $stmt = $db->prepare('SELECT * FROM `contents`');
-    $stmt->execute(); //讀取資料庫需要
+    $id=$_GET['id'];
+    $stmt = $db->prepare('SELECT * FROM `contents` WHERE `id` = :id');
+    $stmt->execute(array(':id'=> $id)); //讀取資料庫需要
     $rows = $stmt->fetchAll();
-    $number=$_GET['id']-1;
+    
   }
 ?>
 <form method='post' action=''>
-  <input id="title" name="title" placeholder="標題" value="<?php if(isset($_GET['id'])){echo $rows[$number]['title'];}?>">
+  <input id="title" name="title" placeholder="標題" value="<?php echo $rows[0]['title']; ?>">
   
   </input>
-  <textarea id='editor1' name='textarea'>
+  <textarea id='editor' name='textarea'>
     <?php 
-      if(isset($_GET['id'])){
-        echo $rows[$number]['textarea'];
-      }
+        echo $rows[0]['textarea'];
     ?>
   </textarea>
   <button type="submit" name="submit">Submit</button>
   <button type="delete" name="delete">Delete</button>
+  <button type="submit" name="output">Output</button>
 </form>

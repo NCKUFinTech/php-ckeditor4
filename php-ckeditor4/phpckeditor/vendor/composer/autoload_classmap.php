@@ -7,10 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
-    'ECPay' => $baseDir . '/classes/config.php',
-    'FBlogin' => $baseDir . '/classes/config.php',
     'MySQL' => $baseDir . '/classes/config.php',
     'Request' => $baseDir . '/classes/request.php',
     'Router' => $baseDir . '/classes/router.php',
-    'address' => $baseDir . '/classes/config.php',
 );
