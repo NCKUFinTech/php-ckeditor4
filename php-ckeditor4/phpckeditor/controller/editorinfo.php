@@ -26,6 +26,7 @@
       $stmt = $db->prepare('SELECT * FROM contents WHERE id=:id');
       $stmt->execute(array(':id' => $id));
       $rows = $stmt->fetchAll();
+
       //這個部分參考https://www.sourcecodester.com/tutorials/php/12412/php-export-html-text-ms-word.html
       if(!empty($rows[0]['title']) && !empty($rows[0]['textarea'])){	
          $output ="
