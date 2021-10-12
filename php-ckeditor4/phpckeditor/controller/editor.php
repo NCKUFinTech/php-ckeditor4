@@ -1,4 +1,6 @@
 <?php
+
+   //存資料
    if(isset($_POST['submit'])){
       $textarea = $_POST['textarea'];
       if($textarea != ''){
@@ -7,9 +9,10 @@
             ':textarea' => $textarea
          ));
 
+         echo "success !";
          header('Location: editor');
       }else{
-         return "error !";
+         echo "error !";
       }
    }
 
