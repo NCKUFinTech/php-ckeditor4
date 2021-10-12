@@ -1,0 +1,4 @@
+CREATE TABLE `contents` (
+  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `textarea` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
