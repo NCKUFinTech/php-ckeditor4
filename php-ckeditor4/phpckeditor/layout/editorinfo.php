@@ -1,11 +1,24 @@
 <h1>CKEDITOR</h1>
 <?php 
-  $stmt = $db->prepare('SELECT * FROM `contents`');
-  $stmt->execute(); //讀取資料庫需要
-  $rows = $stmt->fetchAll();
-  $number=$_GET['id']-1;
+  //read
+  if(isset($_GET['id'])){
+    $stmt = $db->prepare('SELECT * FROM `contents`');
+    $stmt->execute(); //讀取資料庫需要
+    $rows = $stmt->fetchAll();
+    $number=$_GET['id']-1;
+  }
 ?>
 <form method='post' action=''>
-  <textarea id='editor1' name='textarea'><?php echo $rows[$number]['textarea']?></textarea>
-  <input type="submit" name="submit" value="Submit">
+  <input id="title" name="title" placeholder="標題" value="<?php if(isset($_GET['id'])){echo $rows[$number]['title'];}?>">
+  
+  </input>
+  <textarea id='editor1' name='textarea'>
+    <?php 
+      if(isset($_GET['id'])){
+        echo $rows[$number]['textarea'];
+      }
+    ?>
+  </textarea>
+  <button type="submit" name="submit">Submit</button>
+  <button type="delete" name="delete">Delete</button>
 </form>

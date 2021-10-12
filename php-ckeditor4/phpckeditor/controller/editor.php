@@ -1,15 +1,16 @@
 <?php
 
-   //存資料
+   //create
    if(isset($_POST['submit'])){
       $textarea = $_POST['textarea'];
+      $title = $_POST['title'];
       if($textarea != ''){
-         $stmt = $db->prepare('INSERT INTO contents (textarea) VALUES (:textarea)');
+         $stmt = $db->prepare('INSERT INTO contents (title,textarea) VALUES (:title,:textarea)');
          $stmt->execute(array(
-            ':textarea' => $textarea
+            ':textarea' => $textarea,
+            ':title'=> $title
          ));
 
-         echo "success !";
          header('Location: editor');
       }else{
          echo "error !";

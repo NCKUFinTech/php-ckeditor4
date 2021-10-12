@@ -1,5 +1,7 @@
 <h1>CKEDITOR</h1>
 <form method='post' action=''>
-  <textarea id='editor1' name='textarea'></textarea>
-  <input type="submit" name="submit" value="Submit">
+  <input id="title" name="title" placeholder="標題"></input>
+  <textarea id='editor1' name='textarea'>
+  </textarea>
+  <button type="submit" name="submit">Submit</button>
 </form>

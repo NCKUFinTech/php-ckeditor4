@@ -15,11 +15,11 @@
             }
         }
         public function getParameter($index){
-        if(isset($this->parameters[($index-1)])){
-            return $this->parameters[($index-1)];
-        }else{
-            return "";
-        }
+            if(isset($this->parameters[($index-1)])){
+                return $this->parameters[($index-1)];
+            }else{
+                return "";
+            }
         }
     }
 ?>
