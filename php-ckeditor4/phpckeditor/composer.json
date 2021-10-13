@@ -2,7 +2,7 @@
     "name": "enter1130/php",
     "require": {
         "wixel/gump": "^1.12",
-        "phpoffice/phpword": "^0.18.2"
+        "laminas/laminas-escaper": "^2.9"
     },
     "autoload": {
         "classmap": [
